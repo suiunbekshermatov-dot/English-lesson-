@@ -402,7 +402,7 @@
       <div class="top-pill">
         <span>IT & BUSINESS COLLEGE • AIU</span>
       </div>
-      <h1 class="title">Расписание занятий</h1>
+      <h1 class="title">Аудитории и расписание</h1>
       <p class="subtitle">Кафедра английского языка • 1-й и 2-й курс</p>
     </header>
 
@@ -429,13 +429,20 @@
       </div>
 
       <button id="searchButton" class="action-btn">
-        <span>Показать информацию о преподавателе</span>
+        <span>Показать аудиторию и учителя</span>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
         </svg>
       </button>
 
+      <div class="schedule-strip">
+        <div class="shift-box">
+          <div class="shift-dot blue"></div>
+          <div>
+            <strong>08:30</strong>
+            <span>1-я смена (1 поток)</span>
+          </div>
         </div>
         <div class="shift-box">
           <div class="shift-dot amber"></div>
@@ -556,6 +563,20 @@
               <div class="info-row">
                 <span class="label">Преподаватель:</span>
                 <span class="value" style="color: #1e3a8a; font-size: 15px;">${s.teacher}</span>
+              </div>
+
+              <div class="info-row">
+                <span class="label">Время начала:</span>
+                <span class="value">
+                  <span class="time-pill ${pillClass}">${s.time} (${shiftLabel})</span>
+                </span>
+              </div>
+
+              <div class="info-row" style="margin-top: 4px;">
+                <span class="label">Кабинет:</span>
+                <span class="value">
+                  <span class="room-pill">${s.room}</span>
+                </span>
               </div>
 
 
